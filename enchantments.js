@@ -8,8 +8,14 @@
  *
  * @returns {number} number of cards of a single type there are in the deck
  */
-export function cardTypeCheck(stack, card) {
-  throw new Error('Implement the cardTypeCheck function');
+export function cardTypeCheck(stack, cardType) {
+  let count = 0;
+  stack.forEach((card) => {
+      if (card === cardType) {
+          count++;
+      }
+  });
+  return count;
 }
 
 /**
